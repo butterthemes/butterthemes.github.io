@@ -43,6 +43,16 @@ $(function(){
             class: 'item'
         });
 
+        var color = '<li class="color"></li>';
+
+        var palette = CreateElement({
+            type: 'ul',
+            class: 'palette',
+            content: color + color + color + color
+        });
+
+        element.appendChild(palette);
+
         var header = CreateElement({
             type: 'div',
             class: 'header',
@@ -59,15 +69,7 @@ $(function(){
 
         element.appendChild(description);
 
-        var color = '<li class="color"></li>';
 
-        var palette = CreateElement({
-            type: 'ul',
-            class: 'palette',
-            content: color + color + color
-        });
-
-        element.appendChild(palette);
 
         var footer = CreateElement({
             type: 'div',
