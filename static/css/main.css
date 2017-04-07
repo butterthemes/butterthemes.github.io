@@ -2,7 +2,7 @@
 
 body {
     font-family: 'Arial', 'Helvetica', sans-serif;
-    background: #EFEFEF;
+    background: #EEE;
     text-align: center;
     color: #555;
 }
@@ -14,20 +14,23 @@ body {
 .item {
     display: block;
     padding: 25px;
-    border: 1px solid #DDD;
-    border-radius: 5px;
-    max-width: 420px;
+    max-width: 500px;
+    min-width: 380px;
     margin: 25px auto;
-    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.15);
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.15);
     text-align: left;
     line-height: 1em;
     background: #FFF;
-
 }
 
 .item .header {
     display: block;
     padding:20px 0;
+}
+
+.item .description {
+    font-size: 1em;
+    margin-top:25px 0;
 }
 
 .item .footer {
@@ -50,9 +53,37 @@ body {
 .button {
     background: #DDD;
     border-radius: 5px;
-    padding: 10px;
+    padding: 10px 25px;
     display: inline-block;
     text-decoration: none;
     color: #252525;
     text-align:  right;
+}
+
+.palette {
+    list-style: none;
+    display: inline-block;
+    padding: 0;
+    margin-top: 25px;
+}
+
+.palette .color{
+    display: inline-block;
+    width: 75px;
+    height: 15px;
+    margin: 0;
+    background: #EEE;
+    border-bottom: 3px solid rgba(0, 0, 0, 0.25);
+}
+
+.palette .color:nth-child(1){
+    background: var(--Main-color);
+}
+
+.palette .color:nth-child(2){
+    background: var(--Button-active);
+}
+
+.palette .color:nth-child(3){
+    background: var(--Bg-color);
 }
