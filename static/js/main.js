@@ -56,7 +56,7 @@ $(function(){
         var header = CreateElement({
             type: 'div',
             class: 'header',
-            content: '<h3 class="title">'+ i.name +'</h3> <span class="version">'+i.version+'</span>',
+            content: '<h3 class="name">'+ i.name +'</h3> <span class="version">'+i.version+'</span>',
         });
 
         element.appendChild(header);
