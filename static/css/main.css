@@ -14,7 +14,8 @@ body {
 .item {
     display: block;
     padding: 25px;
-    max-width: 480px;
+    max-width: 500px;
+    min-width: 380px;
     margin: 25px auto;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.15);
     text-align: left;
