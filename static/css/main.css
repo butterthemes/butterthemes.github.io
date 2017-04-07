@@ -1,0 +1,58 @@
+/* CLEAN THIS MESS */
+
+body {
+    font-family: 'Arial', 'Helvetica', sans-serif;
+    background: #EFEFEF;
+    text-align: center;
+    color: #555;
+}
+
+.app-title {
+    margin: 50px 0;
+}
+
+.item {
+    display: block;
+    padding: 25px;
+    border: 1px solid #DDD;
+    border-radius: 5px;
+    max-width: 420px;
+    margin: 25px auto;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.15);
+    text-align: left;
+    line-height: 1em;
+    background: #FFF;
+
+}
+
+.item .header {
+    display: block;
+    padding:20px 0;
+}
+
+.item .footer {
+    text-align: right;
+    display: block;
+}
+
+.item .title,
+.item .version{
+    margin:0;
+    display: inline-block;
+}
+
+.item .version{
+    margin: 0 10px;
+    color: #757575;
+
+}
+
+.button {
+    background: #DDD;
+    border-radius: 5px;
+    padding: 10px;
+    display: inline-block;
+    text-decoration: none;
+    color: #252525;
+    text-align:  right;
+}
