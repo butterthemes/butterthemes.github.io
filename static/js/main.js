@@ -3,7 +3,7 @@
 $(function(){
 
     var items = [],
-        username = "butterthemes/",
+        username = "butterthemes",
         api = "https://api.github.com/",
         raw = "https://rawgit.com/"
         raw2 = "https://raw.githack.com/";
@@ -19,11 +19,11 @@ $(function(){
 
         function getColors(theme, element){
             element.classList.add(theme);
-            LoadCss(raw + username + theme + "/master/index.css");
+            LoadCss(raw + username + "/" + theme + "/master/index.css");
         }
 
         function getPackageJson(user, repo, url, fn){
-            $.getJSON(raw + username + repo + "/master/package.json", function(json, status) {
+            $.getJSON(raw + username + "/" + repo + "/master/package.json", function(json, status) {
                 if(status==="success") fn(json, url)
             });
         }
@@ -43,6 +43,16 @@ $(function(){
             class: 'item'
         });
 
+        var color = '<li class="color"></li>';
+
+        var palette = CreateElement({
+            type: 'ul',
+            class: 'palette',
+            content: color + color + color + color
+        });
+
+        element.appendChild(palette);
+
         var header = CreateElement({
             type: 'div',
             class: 'header',
@@ -59,21 +69,14 @@ $(function(){
 
         element.appendChild(description);
 
-        var color = '<li class="color"></li>';
+        var user = '<a class="user" href="https://github.com/'+ username +'">@'+ username +'</a>',
+            install = '<a class="button" href="'+ url +'">Install</a>';
 
-        var palette = CreateElement({
-            type: 'ul',
-            class: 'palette',
-            content: color + color + color
-        });
-
-        element.appendChild(palette);
 
         var footer = CreateElement({
             type: 'div',
             class: 'footer',
-            content: '<a class="button" href="'+ url +'">Install</a>',
-            href: url
+            content: user + install
         });
 
         element.appendChild(footer);
@@ -84,7 +87,7 @@ $(function(){
     }
 
     //Load data
-    $.get(api + "orgs/" + username + "repos", function(data, status){
+    $.get(api + "orgs/" + username + "/repos", function(data, status){
         if(status==="success"){
             data.forEach( function (item, index) {
                 //Check for themes...

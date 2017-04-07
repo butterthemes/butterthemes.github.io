@@ -13,38 +13,52 @@ body {
 
 .item {
     display: block;
-    max-width: 500px;
-    min-width: 380px;
-    margin: 25px auto;
-    border: 1px solid #ccc;
+    width: 480px;
+    padding: 0;
+    margin: 35px auto;
+    border: 1px solid #CCC;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.15);
     text-align: left;
     line-height: 1em;
     background: #FFF;
+    animation-name: create;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease;
 }
 
 .item .header {
     display: block;
-    padding:20px 25px;
-    margin: 10px 0;
+    padding: 0;
+    margin:  35px 0 0 25px;
 }
 
 .item .description {
     font-size: 14px;
-    margin: 0 25px;
+    margin:  8px 25px;
+    color: #656565;
 }
 
 .item .footer {
     text-align: right;
-    display: block;
-    background: #EEE;
-    padding: 15px 25px;
-    border-top: 1px solid #CCC;
+    display: flex;
+    background: #FAFAFA;
+    padding: 10px 25px;
+    margin-top: 35px;
+    border-top: 1px solid #DDD;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.item .footer .user {
+    text-decoration: none;
+    color: #555;
 }
 
 .item .title,
 .item .version{
     margin:0;
+    padding: 0;
     display: inline-block;
 }
 
@@ -59,7 +73,7 @@ body {
     font-weight: bold;
     background: #EEE;
     border: 1px solid #CCC;
-    border-radius: 5px;
+    border-radius: 25px;
     padding: 5px 20px;
     display: inline-block;
     text-decoration: none;
@@ -73,28 +87,49 @@ body {
 
 .palette {
     list-style: none;
-    display: inline-block;
+    display: block;
     padding: 0;
-    margin: 25px;
+    margin: 0;
+    width: 100%;
+    height: 15px;
+    vertical-align: top;
+    background: #CCC;
 }
 
 .palette .color{
     display: inline-block;
-    width: 75px;
-    height: 15px;
+    width: 25%;
+    height: 100%;
     margin: 0;
-    background: #EEE;
+    padding: 0;
     border-bottom: 3px solid rgba(0, 0, 0, 0.25);
+    transition: background 0.2s ease;
 }
 
 .palette .color:nth-child(1){
-    background: var(--Main-color);
+    background: var(--Button-hover);
 }
 
 .palette .color:nth-child(2){
-    background: var(--Button-active);
+    background: var(--Main-color);
 }
 
 .palette .color:nth-child(3){
+    background: var(--Button-active);
+}
+
+.palette .color:nth-child(4){
     background: var(--Bg-color);
+}
+
+@keyframes create {
+    0%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
