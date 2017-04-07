@@ -13,11 +13,11 @@ body {
 
 .item {
     display: block;
-    padding: 25px;
     max-width: 500px;
     min-width: 380px;
     margin: 25px auto;
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.15);
+    border: 1px solid #ccc;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.15);
     text-align: left;
     line-height: 1em;
     background: #FFF;
@@ -25,17 +25,21 @@ body {
 
 .item .header {
     display: block;
-    padding:20px 0;
+    padding:20px 25px;
+    margin: 10px 0;
 }
 
 .item .description {
-    font-size: 1em;
-    margin-top:25px 0;
+    font-size: 14px;
+    margin: 0 25px;
 }
 
 .item .footer {
     text-align: right;
     display: block;
+    background: #EEE;
+    padding: 15px 25px;
+    border-top: 1px solid #CCC;
 }
 
 .item .title,
@@ -51,20 +55,27 @@ body {
 }
 
 .button {
-    background: #DDD;
+    font-size:12px;
+    font-weight: bold;
+    background: #EEE;
+    border: 1px solid #CCC;
     border-radius: 5px;
-    padding: 10px 25px;
+    padding: 5px 20px;
     display: inline-block;
     text-decoration: none;
     color: #252525;
     text-align:  right;
 }
 
+.button:hover {
+    background: #CCC;
+}
+
 .palette {
     list-style: none;
     display: inline-block;
     padding: 0;
-    margin-top: 25px;
+    margin: 25px;
 }
 
 .palette .color{
