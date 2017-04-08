@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Layout from './Layout';
+import Layout from './components/layout';
 
 // If you use React Router, make this component
 // render <Router> with your routes. Currently,

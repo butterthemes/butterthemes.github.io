@@ -4,10 +4,10 @@
   "description": "Boilerplate for ReactJS project with hot code reloading",
   "scripts": {
     "start": "webpack-dev-server",
-    "lint": "eslint app/src",
+    "lint": "eslint src",
     "prebuild": "rimraf dist",
     "build": "cross-env NODE_ENV=production webpack -p --config webpack.config.production.js",
-    "postbuild": "copyfiles app/index.html dist"
+    "postbuild": "copyfiles src/index.html dist"
   },
   "repository": {
     "type": "git",
