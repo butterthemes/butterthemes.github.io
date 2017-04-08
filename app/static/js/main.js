@@ -48,7 +48,7 @@ $(function(){
         var palette = CreateElement({
             type: 'ul',
             class: 'palette',
-            content: color + color + color + color
+            content: color + color + color + color + color
         });
 
         element.appendChild(palette);

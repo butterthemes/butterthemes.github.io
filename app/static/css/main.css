@@ -5,7 +5,7 @@ body{
 }
 body {
     font-family: 'Arial', 'Helvetica', sans-serif;
-    background: #EEE;
+    background: #FFF;
     text-align: center;
     color: #555;
 }
@@ -14,12 +14,13 @@ nav {
     width: 100%;
     margin:0;
     padding:12px 0;
-    background: #FFF;
+    background: #FAFAFA;
     position: fixed;
     top: 0;
     left:0;
     right:0;
-    border-bottom: 1px solid #CCC;
+    border-bottom: 1px solid #DDD;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.05);
     text-align: left;
 
     display: flex;
@@ -43,6 +44,7 @@ nav ul a{ margin:0 10px;}
 nav .ver {
     color: #AAA;
     margin: 0 5px;
+    font-size:14px;
 }
 
 footer {
@@ -70,10 +72,11 @@ footer {
 }
 
 .search {
-    border: 1px solid #ccc;
+    border: 1px solid #DDD;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.05);
     outline: none;
-    padding: 10px;
-    max-width: 450px;
+    padding: 10px 25px;
+    max-width: 400px;
     width: 100%;
     margin-bottom: 45px;
     border-radius: 5px;
@@ -91,8 +94,9 @@ footer {
     width: 350px;
     padding: 0;
     margin: 15px;
-    border: 1px solid #CCC;
-
+    border:1px solid #DDD;
+    border-radius: 5px;
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.075);
     text-align: left;
     line-height: 1em;
     background: #FFF;
@@ -105,7 +109,7 @@ footer {
 .item .header {
     display: block;
     padding: 0;
-    margin:  35px 0 0 25px;
+    margin:  45px 0 0 25px;
 }
 
 .item .description {
@@ -117,9 +121,9 @@ footer {
 .item .footer {
     text-align: right;
     display: flex;
-    background: #FAFAFA;
+
     padding: 10px 25px;
-    margin-top: 35px;
+    margin-top: 45px;
     border-top: 1px solid #DDD;
     align-items: center;
     justify-content: space-between;
@@ -127,7 +131,11 @@ footer {
 
 .item .footer .user {
     text-decoration: none;
-    color: #555;
+    color:  #1e88e5;
+}
+
+.item .footer .user:hover {
+    text-decoration: underline;
 }
 
 .item .name,
@@ -149,7 +157,7 @@ footer {
     background: #EEE;
     border: 1px solid #CCC;
     border-radius: 25px;
-    padding: 5px 20px;
+    padding: 5px 15px;
     display: inline-block;
     text-decoration: none;
     color: #252525;
@@ -163,22 +171,26 @@ footer {
 
 .palette {
     list-style: none;
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     padding: 0;
-    margin: 0;
-    width: 100%;
-    height: 15px;
+    margin: 35px;
+    max-width: 100%;
+    height: 35px;
     vertical-align: top;
     background: #CCC;
+    border-radius: 5px;
+    overflow: hidden;
 }
 
 .palette .color{
     display: inline-block;
-    width: 25%;
+    width: 20%;
     height: 100%;
     margin: 0;
     padding: 0;
-    border-bottom: 3px solid rgba(0, 0, 0, 0.25);
+    border-bottom: 10px solid rgba(0, 0, 0, 0.25);
     transition: background 0.2s ease;
 }
 
@@ -187,15 +199,19 @@ footer {
 }
 
 .palette .color:nth-child(2){
-    background: var(--Main-color);
+    background: var(--Button-active);
 }
 
 .palette .color:nth-child(3){
-    background: var(--Button-active);
+    background: var(--Main-color);
 }
 
 .palette .color:nth-child(4){
     background: var(--Bg-color);
+}
+
+.palette .color:nth-child(5){
+    background: var(--Nav-color);
 }
 
 @keyframes create {
