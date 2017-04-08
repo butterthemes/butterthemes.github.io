@@ -121,10 +121,11 @@ footer {
 .item .footer {
     text-align: right;
     display: flex;
-
+    background: #FAFAFA;
     padding: 10px 25px;
     margin-top: 45px;
     border-top: 1px solid #DDD;
+    border-radius: 0px 0px 5px 5px;
     align-items: center;
     justify-content: space-between;
 }
@@ -145,6 +146,14 @@ footer {
     display: inline-block;
 }
 
+.item .name a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.item .name a:hover{
+    text-decoration: underline;
+}
 .item .version{
     margin: 0 10px;
     color: #757575;

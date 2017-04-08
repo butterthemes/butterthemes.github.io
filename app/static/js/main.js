@@ -56,7 +56,7 @@ $(function(){
         var header = CreateElement({
             type: 'div',
             class: 'header',
-            content: '<h3 class="name">'+ i.name +'</h3> <span class="version">'+i.version+'</span>',
+            content: '<h3 class="name"><a href="'+url+'">'+ i.name +'</a></h3> <span class="version">'+i.version+'</span>',
         });
 
         element.appendChild(header);
@@ -70,7 +70,7 @@ $(function(){
         element.appendChild(description);
 
         var user = '<a class="user" href="https://github.com/'+ username +'">@'+ username +'</a>',
-            install = '<a class="button" href="'+ url +'">Install</a>';
+            install = '<a class="button" href="butter-theme://'+ url +'">Install</a>';
 
 
         var footer = CreateElement({
