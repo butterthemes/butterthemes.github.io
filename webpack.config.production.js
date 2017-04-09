@@ -13,17 +13,25 @@ module.exports = {
   devtool: 'source-map',
 
   module: {
-    rules: [
-      {
-        test: /\.jsx?$/,
-        use: [ 'babel-loader' ],
-        exclude: /node_modules/
-      },
-      {
-          test: /\.css$/,
-          use: [ 'style-loader', 'css-loader' ]
-      }
-    ]
+      loaders: [
+          {
+              test: /\.js$/,
+              loaders: ['babel-loader'],
+              include: path.join(__dirname, 'src')
+          },
+          {
+              test: /\.css$/,
+              loader: 'style-loader'
+          },
+          {
+              test: /\.css$/,
+              loader: 'css-loader',
+              query: {
+                  modules: true,
+                  localIdentName: '[name]__[local]___[hash:base64:5]'
+              }
+          }
+      ]
   },
 
   plugins: [
