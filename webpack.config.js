@@ -14,7 +14,7 @@ module.exports = {
     // bundle the client for hot reloading
     // only- means to only hot reload for successful updates
 
-    './src/main.js',
+    './src/index.js',
     // the entry point of our app
   ],
 
@@ -22,26 +22,35 @@ module.exports = {
     filename: 'bundle.js',
     // the output bundle
 
-    path: path.resolve(__dirname, 'app'),
+    path: path.resolve(__dirname, 'dist'),
 
-    // necessary for HMR to know where to load the hot update chunk
-    publicPath: '/src/static/'
-
+    publicPath: '/static/'
+    // necessary for HMR to know where to load the hot update chunks
   },
 
   devtool: 'inline-source-map',
 
   module: {
-    rules: [
-      {
-        test: /\.jsx?$/,
-        use: [
-          'babel-loader',
-        ],
-        exclude: /node_modules/,
-      },
+    loaders: [
+        {
+            test: /\.js$/,
+            loaders: ['babel-loader'],
+            include: path.join(__dirname, 'src')
+        },
+        {
+            test: /\.css$/,
+            loader: 'style-loader'
+        },
+        {
+            test: /\.css$/,
+            loader: 'css-loader',
+            query: {
+                modules: true,
+                localIdentName: '[name]__[local]___[hash:base64:5]'
+            }
+        }
     ],
-  },
+},
 
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
