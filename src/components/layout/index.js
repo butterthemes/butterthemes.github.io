@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Nav from '../nav';
 import Item from '../item';
 import style from './style.css';
 
@@ -11,6 +12,7 @@ export default class Layout extends Component{
 
     render (){
          let { props } = this
+
          //Dirty test...
          let item = {
              author: '@butter',
@@ -21,8 +23,19 @@ export default class Layout extends Component{
 
          let items = [item,item,item,item,item,item]
 
+         let app = {
+             name: 'Butter-themes',
+             version: '0.0.1'
+         }
+
+         let links = [
+             {name: 'Themes', url:'#'},
+             {name: 'About', url:'#'}
+         ]
+
          return (
              <div>
+               <Nav app={app} items={links}/>
                 <ul className={style.items}>
                     {items.map((a, b)=>(
                         <Item key={b} data={a}/>
