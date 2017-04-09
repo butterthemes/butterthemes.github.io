@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Nav from '../nav';
+import Footer from '../footer';
 import Item from '../item';
 import style from './style.css';
 
@@ -30,17 +31,19 @@ export default class Layout extends Component{
 
          let links = [
              {name: 'Themes', url:'#'},
-             {name: 'About', url:'#'}
+             {name: 'About', url:'#'},
          ]
 
          return (
              <div>
                <Nav app={app} items={links}/>
+               <h2>Butter flavors!</h2>
                 <ul className={style.items}>
                     {items.map((a, b)=>(
                         <Item key={b} data={a}/>
                     ))}
                  </ul>
+                 <Footer />
              </div>
          )
 
