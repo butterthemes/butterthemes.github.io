@@ -1,8 +1,16 @@
+.page section{
+margin-top: 100px;
+}
+
+.page h2{
+margin: 35px auto;
+}
+
 .items{
     display: flex;
     justify-content: center;
     flex-flow: row wrap;
     text-align: center;
-    margin: 45px auto;
+    margin: 10px auto;
     padding: 0;
 }

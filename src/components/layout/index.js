@@ -35,17 +35,18 @@ export default class Layout extends Component{
          ]
 
          return (
-             <div>
+             <div className={style.page}>
                <Nav app={app} items={links}/>
-               <h2>Butter flavors!</h2>
-                <ul className={style.items}>
-                    {items.map((a, b)=>(
-                        <Item key={b} data={a}/>
-                    ))}
-                 </ul>
-                 <Footer />
+               <section>
+                   <h2>Butter flavors from spicy to sweet!</h2>
+                   <ul className={style.items}>
+                        {items.map((a, b)=>(
+                            <Item key={b} data={a}/>
+                        ))}
+                    </ul>
+                </section>
+                <Footer />
              </div>
          )
-
     }
 }
