@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Item from '../item';
+import style from './style.css';
 
 export default class Layout extends Component{
 
@@ -10,14 +11,23 @@ export default class Layout extends Component{
 
     render (){
          let { props } = this
+         //Dirty test...
+         let item = {
+             author: '@butter',
+             name: 'theme-ghost',
+             version: '0.0.1',
+             description: 'Chunk, chunk, chunk!'
+         }
+
+         let items = [item,item,item,item,item,item]
+
          return (
              <div>
-                 <Item data={{
-                     author: '@butter',
-                     name: 'Package',
-                     version: '0.0.1',
-                     description: 'Chunk, chunk, chunk!'
-                 }} />
+                <ul className={style.items}>
+                    {items.map((a, b)=>(
+                        <Item key={b} data={a}/>
+                    ))}
+                 </ul>
              </div>
          )
 
