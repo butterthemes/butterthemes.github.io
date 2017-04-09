@@ -1,9 +1,9 @@
 .page section{
-margin-top: 100px;
+margin-top: 75px;
 }
 
 .page h2{
-margin: 35px auto;
+    padding: 35px;
 }
 
 .items{
@@ -11,6 +11,6 @@ margin: 35px auto;
     justify-content: center;
     flex-flow: row wrap;
     text-align: center;
-    margin: 10px auto;
+    margin: 0 auto;
     padding: 0;
 }
