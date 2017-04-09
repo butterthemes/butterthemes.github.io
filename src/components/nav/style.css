@@ -27,7 +27,11 @@
     margin: 0;
     margin-right: 45px;
 }
-.nav ul a{ margin:0 10px;}
+.nav ul li a{
+    margin:0 10px;
+    text-decoration: none;
+    color: inherit;
+}
 
 .nav .app-data{
     font-size: 18px;
