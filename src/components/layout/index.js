@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Nav from '../nav';
 import Footer from '../footer';
-import Item from '../item';
+import ItemsList from '../item-list';
 import style from './style.css';
 
 export default class Layout extends Component{
@@ -39,11 +39,7 @@ export default class Layout extends Component{
                <Nav app={app} items={links}/>
                <section>
                    <h2>Butter flavors from spicy to sweet!</h2>
-                   <ul className={style.items}>
-                        {items.map((a, b)=>(
-                            <Item key={b} data={a}/>
-                        ))}
-                    </ul>
+                   <ItemsList />
                 </section>
                 <Footer />
              </div>
