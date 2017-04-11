@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Nav from '../nav';
 import Footer from '../footer';
-import ItemsList from '../item-list';
+import ItemsList from '../items-list';
 import style from './style.css';
 
 export default class Layout extends Component{
