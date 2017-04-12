@@ -6,7 +6,7 @@ module.exports = {
 
   output: {
     filename: 'static/bundle.js',
-    path: path.resolve(__dirname, 'dist'),
+    path: path.resolve(__dirname, './dist'),
     publicPath: '/'
   },
 
@@ -16,8 +16,9 @@ module.exports = {
       loaders: [
           {
               test: /\.js$/,
-              loaders: ['babel-loader'],
-              include: path.join(__dirname, 'src')
+              loader: 'babel-loader',
+              include: path.join(__dirname, 'src'),
+              exclude: /node_modules/
           },
           {
               test: /\.css$/,
@@ -37,7 +38,8 @@ module.exports = {
   plugins: [
     new webpack.optimize.UglifyJsPlugin({
       sourceMap: true,
-      comments: false
+      comments: false,
+      //include:  path.join(__dirname, 'src'),
     })
   ]
 };

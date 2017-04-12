@@ -35,6 +35,7 @@ module.exports = {
         {
             test: /\.js$/,
             loaders: ['babel-loader'],
+            exclude: /node_modules/,
             include: path.join(__dirname, 'src')
         },
         {
@@ -49,7 +50,7 @@ module.exports = {
                 localIdentName: '[name]__[local]___[hash:base64:5]'
             }
         }
-    ]
+    ],
 },
 
   plugins: [
@@ -71,6 +72,12 @@ module.exports = {
     // respond to 404s with index.html
 
     hot: true,
+    headers: {
     // enable HMR on the server
+    "Access-Control-Allow-Origin": "http://localhost:300",
+    "Access-Control-Allow-Credentials": "true",
+    "Access-Control-Allow-Headers": "Content-Type, Authorization, x-id, Content-Length, X-Requested-With",
+    "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, OPTIONS"
+}
   },
 };
