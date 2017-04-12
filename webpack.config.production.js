@@ -39,7 +39,6 @@ module.exports = {
     new webpack.optimize.UglifyJsPlugin({
       sourceMap: true,
       comments: false,
-      //include:  path.join(__dirname, 'src'),
     })
   ]
 };
