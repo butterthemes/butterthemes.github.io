@@ -1,0 +1,16 @@
+.page section{
+margin-top: 75px;
+}
+
+.page h2{
+    padding: 35px;
+}
+
+.items{
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
+    text-align: center;
+    margin: 0 auto;
+    padding: 0;
+}

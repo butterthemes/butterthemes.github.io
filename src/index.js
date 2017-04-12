@@ -3,14 +3,15 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './app';
 
-const rootEl = document.getElementById('root');
+const root = document.getElementById('root');
 const render = Component =>
   ReactDOM.render(
     <AppContainer>
-      <Component />
+        <Component />
     </AppContainer>,
-    rootEl
-  );
+    root
+);
 
 render(App);
+
 if (module.hot) module.hot.accept('./app', () => render(App));

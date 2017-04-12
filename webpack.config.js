@@ -14,7 +14,7 @@ module.exports = {
     // bundle the client for hot reloading
     // only- means to only hot reload for successful updates
 
-    './src/main.js',
+    './src/index.js',
     // the entry point of our app
   ],
 
@@ -24,24 +24,34 @@ module.exports = {
 
     path: path.resolve(__dirname, 'dist'),
 
-    // necessary for HMR to know where to load the hot update chunk
-    publicPath: '/src/static/'
-
+    publicPath: '/static/'
+    // necessary for HMR to know where to load the hot update chunks
   },
 
   devtool: 'inline-source-map',
 
   module: {
-    rules: [
-      {
-        test: /\.jsx?$/,
-        use: [
-          'babel-loader',
-        ],
-        exclude: /node_modules/,
-      },
+    loaders: [
+        {
+            test: /\.js$/,
+            loaders: ['babel-loader'],
+            exclude: /node_modules/,
+            include: path.join(__dirname, 'src')
+        },
+        {
+            test: /\.css$/,
+            loader: 'style-loader'
+        },
+        {
+            test: /\.css$/,
+            loader: 'css-loader',
+            query: {
+                modules: true,
+                localIdentName: '[name]__[local]___[hash:base64:5]'
+            }
+        }
     ],
-  },
+},
 
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
@@ -62,6 +72,12 @@ module.exports = {
     // respond to 404s with index.html
 
     hot: true,
+    headers: {
     // enable HMR on the server
+    "Access-Control-Allow-Origin": "http://localhost:300",
+    "Access-Control-Allow-Credentials": "true",
+    "Access-Control-Allow-Headers": "Content-Type, Authorization, x-id, Content-Length, X-Requested-With",
+    "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, OPTIONS"
+}
   },
 };

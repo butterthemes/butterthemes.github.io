@@ -1,0 +1,9 @@
+.footer{
+    padding: 35px;
+    text-align: center;
+}
+
+.footer img {
+    margin: 10px auto;
+    display: block;
+}
