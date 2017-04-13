@@ -1,1 +1,1 @@
-Here https://github.com/butter-gitbot saves butter-themes in `index.json`
+Here url(https://github.com/butter-gitbot)[@butter-gitbot] saves butter-themes in `index.json`
