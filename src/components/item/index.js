@@ -2,11 +2,14 @@ import React, { Component } from 'react';
 import Colorpalette from '../color-palette';
 import style from './style.css';
 
+// Extract colors from theme
+const colors = ["var(--Bg-color)", "var(--Nav-color)", "var(--Button-hover)", "var(--Main-color)", "var(--Button-active)"]
+
 export default (props) => (
 
     <div className={style.item}>
         <link rel="stylesheet" type="text/css" href={props.data.url.css}/>
-        <Colorpalette colors={["#AAA",  "#BBB", "#CCC", "#DDD", "#EEE"]}/>
+        <Colorpalette theme={props.data.name} colors={colors}/>
         <div className={style.content}>
             <h3 className={style.data}>
                 <a className={style.name} href={props.data.url.github}>{props.data.name}</a>
