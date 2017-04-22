@@ -48,7 +48,7 @@
   },
   "dependencies": {
     "babel-eslint": "^7.2.3",
-    "butter-themes-search": "^0.2.3",
+    "butter-themes-search": "^0.2.4",
     "eslint": "^3.14.1",
     "eslint-plugin-react": "^6.9.0",
     "react": "^15.4.2",
