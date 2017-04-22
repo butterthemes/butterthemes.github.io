@@ -9,7 +9,7 @@ export default (props) => (
         <Colorpalette colors={["#AAA",  "#BBB", "#CCC", "#DDD", "#EEE"]}/>
         <div className={style.content}>
             <h3 className={style.data}>
-                <a className={style.name} href="?">{props.data.name}</a>
+                <a className={style.name} href={props.data.url.github}>{props.data.name}</a>
                 <span className={style.version}>{props.data.version}</span>
             </h3>
             <p className={style.description}>{props.data.description}</p>
@@ -21,7 +21,7 @@ export default (props) => (
                     <i className="material-icons">star_rate</i>
                     <span>{props.data.stars}</span>
                 </div>
-                <a className={style.button} href="#">{"install"}</a>
+                <a className={style.button} href={props.data.url.butter}>{"install"}</a>
             </div>
         </div>
     </div>
