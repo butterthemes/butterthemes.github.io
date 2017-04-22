@@ -17,7 +17,10 @@ export default (props) => (
         <div className={style.footer}>
             <a className={style.user} href="#">{props.data.author}</a>
             <div>
-                <span className={style.stars}>&#x2605; 0</span>
+                <div className={style.stars}>
+                    <i className="material-icons">star_rate</i>
+                    <span>{props.data.stars}</span>
+                </div>
                 <a className={style.button} href="#">{"install"}</a>
             </div>
         </div>
