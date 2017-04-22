@@ -67,15 +67,6 @@
     justify-content: space-between;
 }
 
-.item .footer .user {
-    text-decoration: none;
-    color:  #1e88e5;
-}
-
-.item .footer .user:hover {
-    text-decoration: underline;
-}
-
 .stars {
 
     font-size:12px;
