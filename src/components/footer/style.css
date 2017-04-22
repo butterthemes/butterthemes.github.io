@@ -1,9 +1,10 @@
 .footer{
     padding: 35px;
     text-align: center;
+    font-size: 1.10em;
 }
 
 .footer img {
-    margin: 10px auto;
+    margin: 25px auto;
     display: block;
 }

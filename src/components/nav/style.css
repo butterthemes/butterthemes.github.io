@@ -2,13 +2,13 @@
     width: 100%;
     margin:0;
     padding:12px 0;
-    background: #FAFAFA;
+    background: #FFF;
     position: fixed;
     top: 0;
     left:0;
     right:0;
-    border-bottom: 1px solid #DDD;
-    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.05);
+    border-bottom: 1px solid #EEE;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
     text-align: left;
     font-family: Arial, sans-serif;
     display: flex;
